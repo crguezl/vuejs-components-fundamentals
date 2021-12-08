@@ -17,9 +17,7 @@
         We travel the world to source the very best single origin coffee for you
       </h2>
       <div class="plans">
-        <plan name="The Single"></plan>
-        <plan name="The Curious"></plan>
-        <plan name="The Hacker"></plan>
+        <plan v-for="plan in plans" :name="plan.name" :key="plan.key"></plan>
       </div>
     </div>
   </div>
