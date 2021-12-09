@@ -66,12 +66,14 @@ To see the result, you can
 
 [You can download the pdf version of this document here](index.pdf) or by clicking in the left upper corner.
 
-## The goals
+## The goals. Workflow
 
 We have three branches in this repo
 
 1. `main` has the initial structure
 2. `solution` has the final solution developed by the authors of the course
-3.  
+3. `teacher` is the branch I used when I took the course
+
+Use the `main` branch while you take the course
 
 ## References
