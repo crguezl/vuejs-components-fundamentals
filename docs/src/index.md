@@ -76,4 +76,10 @@ We have three branches in this repo
 
 Use the `main` branch while you take the course
 
+!include component-basics.md
+
+!include components-in-depth.md
+
+!include component-exercises.md
+
 ## References
