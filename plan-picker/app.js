@@ -6,6 +6,17 @@ let planItem = {
             required: true
         }
     },
+    data: function() {
+        return {
+            selected: false
+        }
+    },
+    methods: {
+        select() {
+            this.$emit("select", this.name);
+            this.selected = true;
+        }
+    },
 };
 
 let planPicker = {
@@ -26,5 +37,5 @@ new Vue({
     el: "#app",
     components: {
         "plan-picker": planPicker
-    } 
+    }
 })
