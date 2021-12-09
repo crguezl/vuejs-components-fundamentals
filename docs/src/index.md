@@ -66,6 +66,12 @@ To see the result, you can
 
 [You can download the pdf version of this document here](index.pdf) or by clicking in the left upper corner.
 
+## The goals
 
+We have three branches in this repo
+
+1. `main` has the initial structure
+2. `solution` has the final solution developed by the authors of the course
+3.  
 
 ## References
