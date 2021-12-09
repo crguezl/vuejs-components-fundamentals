@@ -1,15 +1,4 @@
-Vue.component('plan-picker', {
-    template: "#plan-picker-template",
-    data: function() {
-        return { plans: [
-            {name: "The Hacker", id: 0}, 
-            {name: "The Curious", id: 1}, 
-            {name: "The Single", id: 2}
-          ]}
-    }
-})
-
-Vue.component('plan-item', {
+let planItem = {
     template: "#plan-item-template",
     props: {
         name: {
@@ -17,7 +6,25 @@ Vue.component('plan-item', {
             required: true
         }
     },
-})
+};
+
+let planPicker = {
+    template: "#plan-picker-template",
+    components: {
+        "plan-item": planItem
+    },
+    data: function() {
+        return { plans: [
+            {name: "The Hacker", id: 0}, 
+            {name: "The Curious", id: 1}, 
+            {name: "The Single", id: 2}
+          ]}
+    }
+};
+
 new Vue({
-    el: "#app"
+    el: "#app",
+    components: {
+        "plan-picker": planPicker
+    }
 })
