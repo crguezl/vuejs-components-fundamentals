@@ -26,5 +26,5 @@ new Vue({
     el: "#app",
     components: {
         "plan-picker": planPicker
-    }
+    } 
 })
