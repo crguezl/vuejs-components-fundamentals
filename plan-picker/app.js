@@ -4,19 +4,22 @@ let planItem = {
         name: {
             type: String,
             required: true
-        }
+        },
     },
-    data: function() {
+    data() {
         return {
-            selected: false
-        }
+            selected: {
+                type: Boolean,
+                default: false
+            }
+        }       
     },
     methods: {
         select() {
             this.$emit("select", this.name);
-            this.selected = true;
+            this.selected = true
         }
-    },
+    }
 };
 
 let planPicker = {
@@ -29,7 +32,14 @@ let planPicker = {
             {name: "The Hacker", id: 0}, 
             {name: "The Curious", id: 1}, 
             {name: "The Single", id: 2}
-          ]}
+          ],
+          selectedPlan: null
+        }
+    },
+    methods: {
+        selectPlan(emittedPlan) {
+            this.selectedPlan = emittedPlan
+        }
     }
 };
 

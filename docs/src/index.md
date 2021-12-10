@@ -43,7 +43,7 @@ nocite: |
 <!--
 https://stackoverflow.com/questions/48429998/data-prefix-is-added-to-custom-attributes-how-to-prevent-this
 -->
-These are my notes written in pandoc markdown [@casiano] from watching the [@vuejsfundamentals] and 
+These are my notes written in pandoc markdown [@casiano, @casiano_rodriguez_leon_2021_5771502] from watching the [@vuejsfundamentals] and 
 [@vuejscomponentsfundamentals]  courses and other [references](#references).
 
 
