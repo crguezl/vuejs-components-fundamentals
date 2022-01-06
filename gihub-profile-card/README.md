@@ -1,6 +1,8 @@
 
 ## TODO 
 
+### Component github-user-card 
+
 * [ ] Create the HTML initial template
 * [ ] Add CDNs for Semantic UI, Vue and Axios
 * [ ] Add the Code of the Semantic UI [Card](#card)
