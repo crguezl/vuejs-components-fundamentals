@@ -4,7 +4,10 @@
 * [ ] Create the HTML initial template
 * [ ] Add CDNs for Semantic UI, Vue and Axios
 * [ ] Add the Code of the Semantic UI [Card](#card)
+* [ ] Create the Vue app object and linkit with the div element with id app
 * [ ] Add the call to the component `<github-user-card username="hootlex"></github-user-card>`
+* [ ] Add a template with the id `github-user-card-template` for the component with the HTMl of Semantic UI [Card](#card)
+* [ ] Add the code to create the `github-user-card` component 
 
 ## Semantic UI
 
