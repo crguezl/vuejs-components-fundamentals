@@ -13,6 +13,7 @@
   * See file `teacher.html` at branch `profile-card` if you have doubts
 * [ ] Add the property `username` and a `user` data to the component
 * [ ] Add a hook `created` to the component. Inside this hook we are going to make the axios call to the GitHub API for the user info
+* [ ] Using the Vue dev tools check that the request is working and the `user` data has the expected contents
 * [ ] Using GitHub REST API you can get the user info from <https://api.github.com/users/crguezl>. Here are some of the fields that can be relevant for the `github-user-card` component:
 
   ```json
@@ -35,7 +36,7 @@
     }
   ```
 * [ ] Add the relevant information to the template. Use a computed property `githubYear` so that appears only the year in which the user joined GitHub
-
+* [ ] Put all the `github-user-card`components inside a `div` with classes `ui` and `cards` to have them in the same line. See <https://semantic-ui.com/views/card.html#cards>
 
 ## Semantic UI
 

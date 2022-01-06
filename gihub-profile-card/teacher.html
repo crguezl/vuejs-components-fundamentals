@@ -13,14 +13,16 @@
 
   <div id="app" class="ui container">
     <h1>GitHub Profiles</h1>
-    <github-user-card username="alu0101102726"></github-user-card>
-    <github-user-card username="PaulaExposito"></github-user-card>
-    <github-user-card username="Pmolmar"></github-user-card>
-    <github-user-card username="alu0100898293"></github-user-card>
-    <github-user-card username="lorenaolaru"></github-user-card>
-    <github-user-card username="mstoisor"></github-user-card>
-    <github-user-card username="ddialar"></github-user-card>
-    <github-user-card username="crguezl"></github-user-card>
+    <div class="ui cards">
+      <github-user-card username="alu0101102726"></github-user-card>
+      <github-user-card username="PaulaExposito"></github-user-card>
+      <github-user-card username="Pmolmar"></github-user-card>
+      <github-user-card username="alu0100898293"></github-user-card>
+      <github-user-card username="lorenaolaru"></github-user-card>
+      <github-user-card username="mstoisor"></github-user-card>
+      <github-user-card username="ddialar"></github-user-card>
+      <github-user-card username="crguezl"></github-user-card>  
+    </div>
   </div>
 
   <!-- begin github-user-card component -->
@@ -39,7 +41,7 @@
         </div>
       </div>
       <div class="extra content">
-        <a>
+        <a :href="`https://github.com/${username}?tab=followers`">
           <i class="user icon"></i>
           {{ user.followers }} Followers
         </a>
