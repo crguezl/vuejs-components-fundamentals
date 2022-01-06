@@ -7,7 +7,11 @@
 * [ ] Create the Vue app object and linkit with the div element with id app
 * [ ] Add the call to the component `<github-user-card username="hootlex"></github-user-card>`
 * [ ] Add a template with the id `github-user-card-template` for the component with the HTMl of Semantic UI [Card](#card)
-* [ ] Add the code to create the `github-user-card` component 
+* [ ] Add the code to create the `github-user-card` component specifying the template
+  * See file `teacher.html` at tag `starting` at branch `profile-card` if you have doubts
+* [ ] Add the property `username` and a `user` data to the component
+* [ ] Add a hook `created` to the component  
+
 
 ## Semantic UI
 
@@ -191,4 +195,24 @@ axios.get('/user', {
     // always executed
   });  
 ```
+
+## Vue Instance Lifecycle hooks 
+
+* See [Instance Lifecycle Hooks](https://crguezl.github.io/learning-vue-geting-started-guide/#instance-lifecycle-hooks) in the teacher [Annotated Reading of the Essentials Section of the Vue.js Guide](https://crguezl.github.io/ learning-vue-geting-started-guide/#annotated-reading-of-the-essentials-section-of-the-vue.js-guide)
+  * and the example [Answering your Question with the yesno.wtf API
+](https://crguezl.github.io/learning-vue-geting-started-guide/#answering-your-question-with-the-yesno.wtf-api)
+* See [Instance Lifecycle Hooks](https://vuejs.org/v2/guide/instance.html#Instance-Lifecycle-Hooks) in the docs
+
+
+Each Vue instance goes through a series of initialization steps when it’s created - for example, it needs 
+
+* to set up data observation, 
+* compile the template, 
+* mount the instance to the DOM, and 
+* update the DOM when data changes. 
+  
+Along the way, it also runs functions called *lifecycle hooks*, 
+giving users the opportunity to add their own code at specific stages.
+
+For example, the `created` hook can be used to run code after an instance is created and it is a time when can safely do asynchronous network operations
 
