@@ -12,7 +12,7 @@
 * [ ] Add the code to create the `github-user-card` component specifying the template
   * See file `teacher.html` at branch `profile-card` if you have doubts
 * [ ] Add the property `username` and a `user` data to the component
-* [ ] Add a hook `created` to the component. Inside this hook we are going to make the axios call to the GitHub GraphQL API for the user info
+* [ ] Add a hook `created` to the component. Inside this hook we are going to make the axios call to the GitHub API for the user info
 * [ ] Using GitHub REST API you can get the user info from <https://api.github.com/users/crguezl>. Here are some of the fields that can be relevant for the `github-user-card` component:
 
   ```json
