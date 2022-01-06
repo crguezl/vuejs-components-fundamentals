@@ -1,8 +1,10 @@
 
 ## TODO 
 
-* [ ] Create the HTML template
+* [ ] Create the HTML initial template
 * [ ] Add CDNs for Semantic UI, Vue and Axios
+* [ ] Add the Code of the Semantic UI [Card](#card)
+* [ ] Add the call to the component `<github-user-card username="hootlex"></github-user-card>`
 
 ## Semantic UI
 
@@ -128,11 +130,27 @@ Joined in 2014 151 Friends
 
 ## Axios
 
-* [Acios en GitHub](https://github.com/axios/axios)
+* [Axios Intro](https://axios-http.com/docs/intro)
+* [Axios en GitHub](https://github.com/axios/axios)
 * [https://unpkg.com/axios](https://unpkg.com/axios)
 
 
 ### Performing a GET request
+
+Want to use async/await? Add the `async` keyword to your outer function/method.
+
+```js
+async function getUser() {
+  try {
+    const response = await axios.get('/user?ID=12345');
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+Or using promises methods:
 
 ```js 
 const axios = require('axios');
@@ -150,8 +168,11 @@ axios.get('/user?ID=12345')
   .then(function () {
     // always executed
   });
+```
 
-// Optionally the request above could also be done as
+Optionally the request above could also be done as
+
+```js
 axios.get('/user', {
     params: {
       ID: 12345
@@ -166,14 +187,5 @@ axios.get('/user', {
   .then(function () {
     // always executed
   });  
-
-// Want to use async/await? Add the `async` keyword to your outer function/method.
-async function getUser() {
-  try {
-    const response = await axios.get('/user?ID=12345');
-    console.log(response);
-  } catch (error) {
-    console.error(error);
-  }
-}
 ```
+
