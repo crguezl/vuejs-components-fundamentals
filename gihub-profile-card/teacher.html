@@ -13,7 +13,7 @@
 
   <div id="app" class="ui container">
     <h1>GitHub Profiles</h1>
-    <div class="ui cards">
+    <div class="ui link cards">
       <github-user-card username="alu0101102726"></github-user-card>
       <github-user-card username="PaulaExposito"></github-user-card>
       <github-user-card username="Pmolmar"></github-user-card>
@@ -28,7 +28,7 @@
   <!-- begin github-user-card component -->
   <template id="github-user-card-template">
     <div class="ui card">
-      <a href="`https://github.com/${username}`" class="image">
+      <a :href="`https://github.com/${username}`" class="image">
         <img :src="user.avatar_url">
       </a>
       <div class="content">
