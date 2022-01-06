@@ -11,35 +11,28 @@
   * See file `teacher.html` at branch `profile-card` if you have doubts
 * [ ] Add the property `username` and a `user` data to the component
 * [ ] Add a hook `created` to the component. Inside this hook we are going to make the axios call to the GitHub GraphQL API for the user info
-* [ ] Using GraphiQL or equivalent play to get user info. Try for example: 
-
-  ```gql
-  query userInfo {
-    user(login: "crguezl") {
-        bio
-        company
-        createdAt
-        name
-        avatarUrl
-    }
-  }
-  ```
-  the anwser will be s.t. similar to this:
+* [ ] Using GitHub REST API you can get the user info from <https://api.github.com/users/crguezl>. Here are some of the fields that can be relevant for the `github-user-card` component:
 
   ```json
-    {
-      "data": {
-          "user": {
-            "bio": "My Control Version Bio: Started with Unix RCS, then moved to  CVS, then Subversion and finally git ",
-            "company": "Universidad de La Laguna @tic-ull",
-            "createdAt": "2011-10-21T07:00:05Z",
-            "name": "Casiano Rodriguez-Leon",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/1142554?v=4"
-            }
-        }
+  {
+    "login": "crguezl",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1142554?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/crguezl",
+    "html_url": "https://github.com/crguezl",
+    "name": "Casiano Rodriguez-Leon",
+    "company": "Universidad de La Laguna @tic-ull",
+    "blog": "https://crguezl.github.io/",
+    "location": "La Laguna. Tenerife",
+    "bio": "My Control Version Bio: Started with Unix RCS, then moved to  CVS, then Subversion and finally git ",
+    "public_repos": 338,
+    "followers": 196,
+    "following": 246,
+    "created_at": "2011-10-21T07:00:05Z",
+    "updated_at": "2022-01-06T13:49:40Z"
     }
   ```
-
+* [ ] Add the relevant information to the template. Use a computed property `githubYear` so that appears only the year in which the user joined GitHub
 
 
 ## Semantic UI
