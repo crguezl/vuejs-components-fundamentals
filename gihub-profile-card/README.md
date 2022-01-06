@@ -8,9 +8,38 @@
 * [ ] Add the call to the component `<github-user-card username="hootlex"></github-user-card>`
 * [ ] Add a template with the id `github-user-card-template` for the component with the HTMl of Semantic UI [Card](#card)
 * [ ] Add the code to create the `github-user-card` component specifying the template
-  * See file `teacher.html` at tag `starting` at branch `profile-card` if you have doubts
+  * See file `teacher.html` at branch `profile-card` if you have doubts
 * [ ] Add the property `username` and a `user` data to the component
-* [ ] Add a hook `created` to the component  
+* [ ] Add a hook `created` to the component. Inside this hook we are going to make the axios call to the GitHub GraphQL API for the user info
+* [ ] Using GraphiQL or equivalent play to get user info. Try for example: 
+
+  ```gql
+  query userInfo {
+    user(login: "crguezl") {
+        bio
+        company
+        createdAt
+        name
+        avatarUrl
+    }
+  }
+  ```
+  the anwser will be s.t. similar to this:
+
+  ```json
+    {
+      "data": {
+          "user": {
+            "bio": "My Control Version Bio: Started with Unix RCS, then moved to  CVS, then Subversion and finally git ",
+            "company": "Universidad de La Laguna @tic-ull",
+            "createdAt": "2011-10-21T07:00:05Z",
+            "name": "Casiano Rodriguez-Leon",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/1142554?v=4"
+            }
+        }
+    }
+  ```
+
 
 
 ## Semantic UI
