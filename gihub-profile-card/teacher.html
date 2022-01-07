@@ -14,14 +14,10 @@
   <div id="app" class="ui container">
     <h1>GitHub Profiles</h1>
     <div class="ui link cards">
-      <github-user-card username="alu0101102726"></github-user-card>
-      <github-user-card username="PaulaExposito"></github-user-card>
-      <github-user-card username="Pmolmar"></github-user-card>
-      <github-user-card username="alu0100898293"></github-user-card>
-      <github-user-card username="lorenaolaru"></github-user-card>
-      <github-user-card username="mstoisor"></github-user-card>
-      <github-user-card username="ddialar"></github-user-card>
-      <github-user-card username="crguezl"></github-user-card>  
+      <github-user-card 
+        v-for="user in users" 
+        :username="user">
+      </github-user-card>
     </div>
   </div>
 
@@ -89,7 +85,17 @@
 
   <script>
     new Vue({
-      el: '#app'
+      el: '#app',
+      data: {
+        users: [
+          "crguezl", "casiano",
+          "ddialar", "alu0100898293",
+          "alu0101102726",
+          "Pmolmar",
+          "PaulaExposito",
+          "mstoisor"]
+
+      }
     })
   </script>
 </body>
