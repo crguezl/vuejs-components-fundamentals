@@ -1,0 +1,103 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+  <!-- Import Vue.js and axios -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="app" class="ui container">
+    <h1>GitHub Profiles</h1>
+    <div class="ui link cards">
+      <github-user-card 
+        v-for="user in users" 
+        :username="user">
+      </github-user-card>
+    </div>
+  </div>
+
+  <!-- begin github-user-card component -->
+  <template id="github-user-card-template">
+    <div class="ui card">
+      <a :href="`https://github.com/${username}`" class="image">
+        <img :src="user.avatar_url">
+      </a>
+      <div class="content">
+        <a class="header" :href="`https://github.com/${username}`">{{ user.name }}</a>
+        <div class="meta">
+          <span class="date">Joined in {{ githubYear }}</span>
+        </div>
+        <div class="description">
+          Bio: {{ user.bio }}
+        </div>
+      </div>
+      <div class="extra content">
+        <a :href="`https://github.com/${username}?tab=followers`">
+          <i class="user icon"></i>
+          {{ user.followers }} Followers
+        </a>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    Vue.component('github-user-card', {
+      template: '#github-user-card-template',
+      props: {
+        username: {
+          type: String,
+          required: true
+        }
+      },
+      computed: {
+        githubYear() {
+          let githubDate = this.user.created_at
+          console.log(githubDate)
+          if (!githubDate) return "";
+          return githubDate.replace(/^(\d+).*/, "$1")
+        }
+      },
+      data() {
+        return {
+          user: {}
+        }
+      },
+      created() {
+        axios(
+          {
+            url: `https://api.github.com/users/${this.username}`,
+            method: "GET"
+          })
+          .then(response => {
+            console.log(response);
+            this.user = response.data
+          })
+
+      }
+    })
+  </script>
+  <!-- end github-user-card component -->
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        users: [
+          "crguezl", "casiano",
+          "ddialar", "alu0100898293",
+          "alu0101102726",
+          "Pmolmar",
+          "PaulaExposito",
+          "mstoisor"]
+
+      }
+    })
+  </script>
+</body>
+
+</html>
